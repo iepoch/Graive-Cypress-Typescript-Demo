@@ -1,4 +1,4 @@
-
+import { getChatsSchema } from "../Utils/schema";
 
 
 
@@ -43,6 +43,7 @@ let api_key: any
             }
         }).then(response =>{
             expect(response.status).to.equal(200);
+            cy.validateSchema(getChatsSchema, response.body)
             expect(response.body).to.be.a('object');
              let results = response.body.results
             for(let i in results){

@@ -1,4 +1,3 @@
-import cypress from "cypress";
 
 class BasePage {
 

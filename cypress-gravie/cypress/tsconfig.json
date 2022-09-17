@@ -8,7 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "lib": ["es6", "dom"],
-    "types": ["cypress", "cypress-file-upload", "node"]
+    "types": ["cypress", "cypress-file-upload", "node", "./Utils"]
   },
   "include": ["cypress-gravie/cypress.config.ts","**/*.ts"]
 }
