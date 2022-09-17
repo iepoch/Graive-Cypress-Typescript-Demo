@@ -21,16 +21,18 @@ import './commands'
 // load type definitions that come with Cypress module
 // <reference types="cypress" />
 
-
 declare global {
   namespace Cypress {
     interface Chainable {
       /**
        * Custom command to select DOM element by data-cy attribute.
        * @example cy.dataCy('greeting')
+       * 
        */
+  
       // Logout(): Chainable<Element>
       // Login(username: string,password: string): Chainable<Element>
+        validateSchema(schema: any, response: any): Chainable<Element>
     }
   }
 }
