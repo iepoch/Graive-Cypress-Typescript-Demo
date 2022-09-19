@@ -12,13 +12,11 @@ export const validateSchema = (schema: any, response: any) => {
   const ajv = new Ajv();
   const validate = ajv.compile(schema);
   const valid = validate(response);
-  cy.log(schema, response)
-
   if (!valid) {
     getSchemaError(validate.errors).then((schemaError) => {
       throw new Error(schemaError);
     });
   } else {
-    cy.log("Schema validated!");
+       assert.isTrue(valid, "Schema validation successful")
   }
 };
