@@ -9,7 +9,8 @@
 // ***********************************************
 //
 
-import {validateSchema} from '../e2e/Utils/validate-schema-comman'
+import { validateSchema } from '../e2e/Utils/validate-schema-comman'
+import { accessory, characters } from '../e2e/Utils/get-api'
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
@@ -26,4 +27,9 @@ import {validateSchema} from '../e2e/Utils/validate-schema-comman'
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('validateSchema', validateSchema)
+Cypress.Commands.add('validateSchema', validateSchema);
+
+
+Cypress.Commands.add('accessory', accessory);
+
+Cypress.Commands.add('characters', characters);

@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-plugin-api'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 // in cypress/support/index.ts
@@ -24,15 +25,27 @@ import './commands'
 declare global {
   namespace Cypress {
     interface Chainable {
+    
       /**
-       * Custom command to select DOM element by data-cy attribute.
-       * @example cy.dataCy('greeting')
-       * 
-       */
-  
-      // Logout(): Chainable<Element>
-      // Login(username: string,password: string): Chainable<Element>
-        validateSchema(schema: any, response: any): Chainable<Element>
+       * This validates the Schema agains the json response schema.
+       * @example
+       * cy.validateSchem(actualSchema, responseSchema)
+      */
+      validateSchema(schema: any, response: any): Chainable<Element>
+        
+      /**
+       * Theis returns the Accessory API  with 1 item
+       * @example
+       * cy.acessory()
+      */
+      accessory(): Chainable<any>
+
+     /**
+       * Returns the Characters API with a limit of 10 character returned
+        * @example
+        * cy.characters()
+      */
+      characters(): Chainable<any>
     }
   }
 }
