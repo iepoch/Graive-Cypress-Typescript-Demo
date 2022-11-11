@@ -9,8 +9,8 @@
 // ***********************************************
 //
 
-import { validateSchema } from '../e2e/Utils/validate-schema-comman'
-import { accessory, characters } from '../e2e/Utils/get-api'
+import { validateSchema } from '../e2e/Utils/validate-schema-comman';
+import { accessory, characters } from '../e2e/Utils/get-api';
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
@@ -28,7 +28,6 @@ import { accessory, characters } from '../e2e/Utils/get-api'
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('validateSchema', validateSchema);
-
 
 Cypress.Commands.add('accessory', accessory);
 

@@ -14,8 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-import 'cypress-plugin-api'
+import './commands';
+import 'cypress-plugin-api';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 // in cypress/support/index.ts
@@ -23,29 +23,28 @@ import 'cypress-plugin-api'
 // <reference types="cypress" />
 
 declare global {
-  namespace Cypress {
-    interface Chainable {
-    
-      /**
-       * This validates the Schema agains the json response schema.
-       * @example
-       * cy.validateSchem(actualSchema, responseSchema)
-      */
-      validateSchema(schema: any, response: any): Chainable<Element>
-        
-      /**
-       * Theis returns the Accessory API  with 1 item
-       * @example
-       * cy.acessory()
-      */
-      accessory(): Chainable<any>
+    namespace Cypress {
+        interface Chainable {
+            /**
+             * This validates the Schema agains the json response schema.
+             * @example
+             * cy.validateSchem(actualSchema, responseSchema)
+             */
+            validateSchema(schema: any, response: any): Chainable<Element>;
 
-     /**
-       * Returns the Characters API with a limit of 10 character returned
-        * @example
-        * cy.characters()
-      */
-      characters(): Chainable<any>
+            /**
+             * Theis returns the Accessory API  with 1 item
+             * @example
+             * cy.acessory()
+             */
+            accessory(): Chainable<any>;
+
+            /**
+             * Returns the Characters API with a limit of 10 character returned
+             * @example
+             * cy.characters()
+             */
+            characters(): Chainable<any>;
+        }
     }
-  }
 }
